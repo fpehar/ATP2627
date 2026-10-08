@@ -1,0 +1,38 @@
+<!-- Mermaid za Pandoc + reveal.js: crta dijagram kad se slajd prikaže -->
+<style>
+.reveal pre.mermaid { background: none; box-shadow: none; width: 100%; font-family: Arial, Helvetica, sans-serif; font-size: 20px; line-height: 1.2; text-align: center; white-space: normal; }
+.reveal pre.mermaid svg { max-height: 480px; max-width: 100%; height: auto; }
+.reveal pre.mermaid, .reveal pre.mermaid * { font-family: Arial, Helvetica, sans-serif !important; }
+.reveal pre.mermaid foreignObject { overflow: visible; }
+.reveal table { font-size: 0.8em; }
+.reveal blockquote { width: 90%; font-size: 0.9em; }
+</style>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+mermaid.initialize({
+  startOnLoad: false, theme: 'default', securityLevel: 'loose',
+  fontFamily: 'Arial, Helvetica, sans-serif',
+  themeVariables: { fontSize: '20px' },
+  flowchart: { useMaxWidth: true, wrappingWidth: 400, padding: 24 },
+  gantt: { fontSize: 15, sectionFontSize: 16, barHeight: 30, barGap: 8, leftPadding: 110, useMaxWidth: true }
+});
+function prepare() {
+  document.querySelectorAll('pre.mermaid').forEach(pre => {
+    const code = pre.querySelector('code');
+    if (code) { pre.textContent = code.textContent; }
+  });
+}
+async function render() {
+  const slide = window.Reveal ? Reveal.getCurrentSlide() : document;
+  if (!slide) return;
+  const nodes = slide.querySelectorAll('pre.mermaid:not([data-processed])');
+  if (document.fonts) { await document.fonts.ready; }
+  if (nodes.length) { await mermaid.run({ nodes }); if (window.Reveal) Reveal.layout(); }
+}
+function start() {
+  prepare();
+  if (window.Reveal && Reveal.isReady && Reveal.isReady()) { render(); }
+  if (window.Reveal) { Reveal.on('ready', render); Reveal.on('slidechanged', render); }
+}
+if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
+</script>

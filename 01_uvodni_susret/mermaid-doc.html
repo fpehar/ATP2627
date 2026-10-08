@@ -1,0 +1,12 @@
+<style>
+body { max-width: 52em; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; }
+pre.mermaid { background: none; text-align: center; font-family: Arial, Helvetica, sans-serif; }
+table { border-collapse: collapse; } th, td { border: 1px solid #ccc; padding: 4px 8px; }
+blockquote { border-left: 4px solid #1f4e79; margin-left: 0; padding-left: 1em; color: #333; }
+</style>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: false, fontFamily: 'Arial, Helvetica, sans-serif' });
+document.querySelectorAll('pre.mermaid').forEach(pre => { const c = pre.querySelector('code'); if (c) pre.textContent = c.textContent; });
+mermaid.run({ querySelector: 'pre.mermaid' });
+</script>

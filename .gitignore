@@ -1,0 +1,13 @@
+# Sve u korijenu ignorira se, osim onoga što je eksplicitno dopušteno
+/*
+!/.gitignore
+!/1P_202627_ATP.pdf
+!/01_uvodni_susret/
+
+# Unutar dopuštenih mapa: nastavničke i još neodržane datoteke
+**/01_plan_sata*
+**/01_ulazna_dijagnostika*
+
+# Sistemske datoteke
+.DS_Store
+Thumbs.db

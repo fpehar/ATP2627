@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr" xml:lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Vježba 1: Prvi koraci</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style>
+  body { max-width: 52em; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; }
+  pre.mermaid { background: none; text-align: center; font-family: Arial, Helvetica, sans-serif; }
+  table { border-collapse: collapse; } th, td { border: 1px solid #ccc; padding: 4px 8px; }
+  blockquote { border-left: 4px solid #1f4e79; margin-left: 0; padding-left: 1em; color: #333; }
+  </style>
+  <script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: false, fontFamily: 'Arial, Helvetica, sans-serif' });
+  document.querySelectorAll('pre.mermaid').forEach(pre => { const c = pre.querySelector('code'); if (c) pre.textContent = c.textContent; });
+  mermaid.run({ querySelector: 'pre.mermaid' });
+  </script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Vježba 1: Prvi koraci</h1>
+<p class="subtitle">Akademsko i tehničko pisanje · 8. 10. 2026.</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#vježba-1-prvi-koraci" id="toc-vježba-1-prvi-koraci">Vježba
+1: Prvi koraci</a>
+<ul>
+<li><a href="#a.-ulazna-dijagnostika-25-min"
+id="toc-a.-ulazna-dijagnostika-25-min">A. Ulazna dijagnostika (25
+min)</a></li>
+<li><a href="#b.-koji-vam-readme-pomaže-15-min"
+id="toc-b.-koji-vam-readme-pomaže-15-min">B. Koji vam README pomaže? (15
+min)</a></li>
+<li><a href="#c.-visual-studio-code-i-prva-markdown-datoteka-30-min"
+id="toc-c.-visual-studio-code-i-prva-markdown-datoteka-30-min">C. Visual
+Studio Code i prva Markdown datoteka (30 min)</a>
+<ul>
+<li><a href="#što-je-markdown" id="toc-što-je-markdown">Što je
+Markdown?</a></li>
+<li><a href="#korak-1-otvori-mapu" id="toc-korak-1-otvori-mapu">Korak 1:
+Otvori mapu</a></li>
+<li><a href="#korak-2-napravi-datoteku"
+id="toc-korak-2-napravi-datoteku">Korak 2: Napravi datoteku</a></li>
+<li><a href="#korak-3-prepiši-i-prilagodi-predložak"
+id="toc-korak-3-prepiši-i-prilagodi-predložak">Korak 3: Prepiši i
+prilagodi predložak</a></li>
+<li><a href="#korak-4-pogledaj-kako-izgleda"
+id="toc-korak-4-pogledaj-kako-izgleda">Korak 4: Pogledaj kako
+izgleda</a></li>
+<li><a href="#provjera" id="toc-provjera">Provjera</a></li>
+</ul></li>
+<li><a href="#d.-plan-rada-10-min" id="toc-d.-plan-rada-10-min">D. Plan
+rada (10 min)</a></li>
+<li><a href="#e.-profesionalni-e-mail-8-min"
+id="toc-e.-profesionalni-e-mail-8-min">E. Profesionalni e-mail (8
+min)</a>
+<ul>
+<li><a href="#situacija" id="toc-situacija">Situacija</a></li>
+<li><a href="#ovako-ne" id="toc-ovako-ne">Ovako ne</a></li>
+<li><a href="#što-dobar-e-mail-ima" id="toc-što-dobar-e-mail-ima">Što
+dobar e-mail ima</a></li>
+<li><a href="#provjera-1" id="toc-provjera-1">Provjera</a></li>
+</ul></li>
+<li><a href="#domaća-zadaća-do-14.-10.-2026."
+id="toc-domaća-zadaća-do-14.-10.-2026.">Domaća zadaća (do 14. 10.
+2026.)</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="vježba-1-prvi-koraci">Vježba 1: Prvi koraci</h1>
+<p>Danas ćeš napraviti <strong>prvu Markdown datoteku</strong>,
+<strong>plan rada</strong> za cijeli semestar i <strong>profesionalni
+e-mail</strong>. Prije toga ispunjavaš kratku ulaznu dijagnostiku.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Trajanje</strong></td>
+<td>90 minuta</td>
+</tr>
+<tr class="even">
+<td><strong>Korištenje AI-a</strong></td>
+<td>Razina 1: danas <strong>bez AI alata</strong> – želimo vidjeti kako
+pišeš ti</td>
+</tr>
+<tr class="odd">
+<td><strong>Predaja</strong></td>
+<td>Merlin, zadatak „Vježba 1”, do <strong>14. 10. 2026. u
+23:59</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Što predaješ</strong></td>
+<td><code>o-meni.md</code>, <code>plan-rada.md</code>,
+<code>e-mail.md</code></td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart LR
+    A[&quot;A. Dijagnostika&lt;br/&gt;25 min&quot;] --&gt; B[&quot;B. Dva README-a&lt;br/&gt;15 min&quot;]
+    B --&gt; C[&quot;C. VS Code i&lt;br/&gt;Markdown, 30 min&quot;]
+    C --&gt; D[&quot;D. Plan rada&lt;br/&gt;10 min&quot;]
+    D --&gt; E[&quot;E. E-mail&lt;br/&gt;8 min&quot;]</code></pre>
+<h2 id="a.-ulazna-dijagnostika-25-min">A. Ulazna dijagnostika (25
+min)</h2>
+<p>Ispuni obrazac koji ti je podijelio nastavnik. Ne ocjenjuje se.</p>
+<h2 id="b.-koji-vam-readme-pomaže-15-min">B. Koji vam README pomaže? (15
+min)</h2>
+<p><strong>README</strong> je prva datoteka koju korisnik otvori kad
+pronađe neki program. Govori mu čemu program služi i kako ga
+pokrenuti.</p>
+<p>Otvori datoteke <code>README_A.md</code> i <code>README_B.md</code>.
+Obje opisuju isti alat, <strong>Tjednik</strong>.</p>
+<blockquote>
+<p><strong>Napomena:</strong> Tjednik je izmišljeni alat napravljen za
+ovu vježbu. Ne pokušavaj ga instalirati.</p>
+</blockquote>
+<p>U paru odgovorite:</p>
+<ol type="1">
+<li>Zamislite da prvi put vidite ovaj alat. S kojim biste README-om
+<strong>uspjeli</strong> pokrenuti alat?</li>
+<li>Navedite <strong>tri konkretna mjesta</strong> u slabijem README-u
+na kojima biste zapeli.</li>
+<li>Iz toga izvedite <strong>tri pravila</strong> za pisanje dobrog
+README-a. Svako pravilo u jednoj rečenici.</li>
+</ol>
+<p>Pravila skupljamo na ploči. To su vaša prva pravila kvalitete i
+vraćat ćemo im se cijeli semestar.</p>
+<h2 id="c.-visual-studio-code-i-prva-markdown-datoteka-30-min">C. Visual
+Studio Code i prva Markdown datoteka (30 min)</h2>
+<h3 id="što-je-markdown">Što je Markdown?</h3>
+<p>Markdown je način pisanja običnog teksta s nekoliko oznaka za
+oblikovanje. <code>#</code> znači naslov, <code>-</code> stavku popisa,
+<code>**tekst**</code> podebljani tekst. Isti tekst čitljiv je i kao
+obična datoteka i kao oblikovana stranica. Ovim jezikom pisat ćeš cijelu
+dokumentaciju u projektu P1.</p>
+<h3 id="korak-1-otvori-mapu">Korak 1: Otvori mapu</h3>
+<ol type="1">
+<li>Pokreni <strong>Visual Studio Code</strong>.
+<ul>
+<li>Na vlastitom računalu, ako ga nemaš: preuzmi ga s <a
+href="https://code.visualstudio.com"
+class="uri">https://code.visualstudio.com</a>.</li>
+<li>Ako ne radi: otvori <a href="https://vscode.dev"
+class="uri">https://vscode.dev</a> u pregledniku.</li>
+</ul></li>
+<li>U svojoj mapi <strong>Dokumenti</strong> napravi mapu
+<code>ATP</code>.</li>
+<li>U VS Codeu odaberi <strong>File → Open Folder…</strong> i otvori
+mapu <code>ATP</code>.</li>
+</ol>
+<p><strong>Očekivani rezultat:</strong> u lijevom stupcu (Explorer)
+vidiš naziv <code>ATP</code>.</p>
+<h3 id="korak-2-napravi-datoteku">Korak 2: Napravi datoteku</h3>
+<ol type="1">
+<li>Odaberi <strong>File → New File…</strong> i upiši naziv
+<code>o-meni.md</code>.</li>
+<li>Pazi da naziv završava s <code>.md</code>. Bez toga VS Code ne zna
+da je riječ o Markdownu.</li>
+</ol>
+<p><strong>Očekivani rezultat:</strong> datoteka <code>o-meni.md</code>
+pojavi se u lijevom stupcu.</p>
+<h3 id="korak-3-prepiši-i-prilagodi-predložak">Korak 3: Prepiši i
+prilagodi predložak</h3>
+<p>Prepiši ovaj predložak u svoju datoteku i <strong>zamijeni tekst u
+uglatim zagradama</strong> svojim podacima. Ne kopiraj ga – pisanjem
+oznaka rukom brže ih naučiš.</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># O meni</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Ja sam <span class="co">[</span><span class="ot">ime</span><span class="co">]</span>, student/ica prve godine Informacijskih tehnologija.</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Moje računalo</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Operacijski sustav: <span class="co">[</span><span class="ot">Windows 11 / macOS / Linux</span><span class="co">]</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Uređivač koda: Visual Studio Code</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Najviše radim na: <span class="co">[</span><span class="ot">vlastitom laptopu / računalu u učionici</span><span class="co">]</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Što već znam</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Najviše iskustva imam s **[npr. Pythonom]**, a najmanje s *[npr. terminalom]*.</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Što želim naučiti ovaj semestar</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">prvi cilj</span><span class="co">]</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span><span class="co">[</span><span class="ot">drugi cilj</span><span class="co">]</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span><span class="co">[</span><span class="ot">treći cilj</span><span class="co">]</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Korisna poveznica</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>Kolegij pratim na <span class="co">[</span><span class="ot">Merlinu</span><span class="co">](https://moodle.srce.hr)</span>.</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>Naredba kojom provjeravam verziju Pythona je <span class="in">`python --version`</span>.</span></code></pre></div>
+<h3 id="korak-4-pogledaj-kako-izgleda">Korak 4: Pogledaj kako
+izgleda</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Radnja</th>
+<th>Windows / Linux</th>
+<th>macOS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pregled u novoj kartici</td>
+<td><code>Ctrl</code> + <code>Shift</code> + <code>V</code></td>
+<td><code>Cmd</code> + <code>Shift</code> + <code>V</code></td>
+</tr>
+<tr class="even">
+<td>Pregled uz tekst</td>
+<td><code>Ctrl</code> + <code>K</code>, zatim <code>V</code></td>
+<td><code>Cmd</code> + <code>K</code>, zatim <code>V</code></td>
+</tr>
+<tr class="odd">
+<td>Spremanje</td>
+<td><code>Ctrl</code> + <code>S</code></td>
+<td><code>Cmd</code> + <code>S</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Očekivani rezultat:</strong> s desne strane vidiš oblikovan
+tekst s naslovima, popisima i podebljanim riječima.</p>
+<h3 id="provjera">Provjera</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Datoteka se zove
+<code>o-meni.md</code>.</label></li>
+<li><label><input type="checkbox" />Ima jedan naslov <code>#</code> i
+najmanje tri podnaslova <code>##</code>.</label></li>
+<li><label><input type="checkbox" />Ima nenumerirani i numerirani
+popis.</label></li>
+<li><label><input type="checkbox" />Ima barem jednu podebljanu i jednu
+ukošenu riječ.</label></li>
+<li><label><input type="checkbox" />Ima poveznicu i naredbu označenu kao
+<code>kod</code>.</label></li>
+<li><label><input type="checkbox" />U pregledu nema vidljivih znakova
+<code>#</code>, <code>*</code> ni <code>[</code>.</label></li>
+</ul>
+<h2 id="d.-plan-rada-10-min">D. Plan rada (10 min)</h2>
+<p>Kolegij nosi <strong>3 ECTS boda</strong>, što je <strong>75–90 sati
+rada</strong> u semestru, odnosno oko <strong>5 sati tjedno</strong>
+zajedno s nastavom. Rokovi ne dolaze iznenada: sve ih vidiš već
+danas.</p>
+<ol type="1">
+<li>Napravi datoteku <code>plan-rada.md</code>.</li>
+<li>Prepiši u nju popis rokova. Oznaka <code>- [ ]</code> je
+<strong>popis zadataka</strong>: kad nešto napraviš, upiši
+<code>x</code> između zagrada (<code>- [x]</code>).</li>
+<li>Iste rokove upiši u kalendar na mobitelu, s podsjetnikom <strong>tri
+dana prije</strong>.</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Plan rada: Akademsko i tehničko pisanje</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rokovi</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 14. 10. 2026. – Vježba 1 (o-meni.md, plan-rada.md, e-mail.md)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 11. 11. 2026. – Dokumentacijski izazov: dnevnik i izvještaj</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 2. 12. 2026. – P1: prva objava priručnika</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 10. 12. 2026. – Praktični kolokvij</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 17. 12. 2026. – P1: konačna verzija i izvještaj o testiranju</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 6. 1. 2027. – P2: problemsko pitanje, tablica izvora, plan rada</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 11. 1. 2027. – P2: anotirana bibliografija</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 17. 1. 2027. – P2: prva cjelovita verzija</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 21. 1. 2027. – P2: recenzije kolega; prezentacija P1</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 25. 1. 2027. – P2: konačna verzija</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 27. 1. 2027. – Završna refleksija</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Moja procjena</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>Najviše vremena trebat će mi za: <span class="co">[</span><span class="ot">...</span><span class="co">]</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>Najveći rizik da zakasnim je: <span class="co">[</span><span class="ot">...</span><span class="co">]</span></span></code></pre></div>
+<h2 id="e.-profesionalni-e-mail-8-min">E. Profesionalni e-mail (8
+min)</h2>
+<h3 id="situacija">Situacija</h3>
+<p>Na vježbe <strong>22. 10.</strong> ne možeš doći zbog liječničkog
+pregleda. Javi to nastavniku i pitaj kako nadoknaditi zadatak s tih
+vježbi.</p>
+<h3 id="ovako-ne">Ovako ne</h3>
+<blockquote>
+<p><strong>Predmet:</strong> (prazno)</p>
+<p>bok profesore nemogu doc na vjezbe sljedeci tjedan jel moram nesto
+nadoknadit</p>
+<p><em>Poslano s mog iPhonea</em></p>
+</blockquote>
+<h3 id="što-dobar-e-mail-ima">Što dobar e-mail ima</h3>
+<pre class="mermaid"><code>flowchart TB
+    S[&quot;Predmet: kolegij + o čemu je riječ&quot;] --&gt; P[&quot;Pozdrav s titulom&quot;]
+    P --&gt; T[&quot;Tko si: ime, studij, godina&quot;]
+    T --&gt; Z[&quot;Što trebaš – u jednoj rečenici&quot;]
+    Z --&gt; K[&quot;Kontekst, ako je potreban&quot;]
+    K --&gt; H[&quot;Zahvala i potpis&quot;]</code></pre>
+<p>Napiši svoj e-mail u datoteku <code>e-mail.md</code>. <strong>Ne
+šalji ga</strong> – predaješ ga na Merlin.</p>
+<h3 id="provjera-1">Provjera</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />Iz predmeta se vidi kolegij i o čemu
+je riječ.</label></li>
+<li><label><input type="checkbox" />U prvoj rečenici nakon pozdrava zna
+se tko piše.</label></li>
+<li><label><input type="checkbox" />Ono što tražiš stane u jednu
+rečenicu.</label></li>
+<li><label><input type="checkbox" />Nema skraćenica iz poruka
+(<em>jel</em>, <em>nemogu</em>, <em>pls</em>).</label></li>
+<li><label><input type="checkbox" />Potpis ima ime, prezime i
+studij.</label></li>
+</ul>
+<h2 id="domaća-zadaća-do-14.-10.-2026.">Domaća zadaća (do 14. 10.
+2026.)</h2>
+<ol type="1">
+<li>Otvori račun na <strong>GitHubu</strong> (<a
+href="https://github.com" class="uri">https://github.com</a>).
+Korisničko ime neka bude profesionalno, npr. <code>ivana-horvat</code>,
+ne <code>xX_gamer_Xx</code>. Služit će ti cijeli studij.</li>
+<li>Upiši se u e-kolegij na <strong>Merlinu</strong>.</li>
+<li>Predaj <code>o-meni.md</code>, <code>plan-rada.md</code> i
+<code>e-mail.md</code> u zadatak „Vježba 1”.</li>
+<li>Dodaj u <code>o-meni.md</code> poveznicu na svoj GitHub profil.</li>
+</ol>
+<p><strong>Sljedeći tjedan:</strong> jasan tehnički stil i prvi koraci u
+<strong>terminalu</strong>.</p>
+</body>
+</html>
