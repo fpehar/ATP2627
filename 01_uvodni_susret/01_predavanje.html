@@ -8,8 +8,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reset.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.1.0/dist/reveal.css">
   <style>
     .reveal .sourceCode {  /* see #7635 */
       overflow: visible;
@@ -94,7 +94,7 @@
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.1.0/dist/theme/white.css" id="theme">
   <style>
   .slides {
       font-size: 0.75em;
@@ -182,13 +182,15 @@
 <section>
 <section id="prije-nego-što-išta-kažem"
 class="title-slide slide level1">
-<h1>Prije nego što išta kažem…</h1>
+<h1>Prije nego što išta kažem …</h1>
 
 </section>
 <section id="uzmite-papir-i-olovku" class="slide level2">
 <h2>Uzmite papir i olovku</h2>
-<p>Za dvije minute svi ćete crtati <strong>isti lik</strong>.</p>
-<p>Ja ću ga opisati. Vi crtate. Bez pitanja.</p>
+<p>Dvije minute svi ćete crtati na papiru <strong>isti
+crtež</strong>.</p>
+<p>Ja ću ga opisati. Vi crtate. Pitanja ili potpitanja nisu
+dopuštena.</p>
 <div class="fragment">
 <blockquote>
 <p>„Nacrtaj kvadrat. Na njega stavi krug. U kvadratu je trokut. Dodaj
@@ -196,8 +198,9 @@ crtu.”</p>
 </blockquote>
 </div>
 </section>
-<section id="usporedite-crteže-sa-susjedom" class="slide level2">
-<h2>Usporedite crteže sa susjedom</h2>
+<section id="usporedite-crteže-sa-svojim-susjedima"
+class="slide level2">
+<h2>Usporedite crteže sa svojim susjedima</h2>
 <div>
 <ul>
 <li class="fragment">Jesu li isti?</li>
@@ -205,18 +208,6 @@ crtu.”</p>
 <li class="fragment">Kamo gleda trokut?</li>
 <li class="fragment">Odakle kreće crta i koliko je duga?</li>
 </ul>
-</div>
-</section>
-<section id="ovo-sam-imao-na-umu" class="slide level2">
-<h2>Ovo sam imao na umu</h2>
-<svg viewBox="0 0 360 220" width="520" role="img" aria-label="Kvadrat; krug čije je središte u gornjem desnom kutu kvadrata; trokut upisan u kvadrat s vrhom na sredini gornje stranice; vodoravna crta iz središta kruga udesno">
-<rect x="60" y="50" width="140" height="140" fill="none" stroke="#1f4e79" stroke-width="4"/>
-<polygon points="60,190 200,190 130,50" fill="none" stroke="#c0504d" stroke-width="4"/>
-<circle cx="200" cy="50" r="35" fill="none" stroke="#2e7d32" stroke-width="4"/>
-<line x1="200" y1="50" x2="340" y2="50" stroke="#555" stroke-width="4"/>
-</svg>
-<div class="fragment">
-<p>Vi niste krivo crtali. <strong>Ja sam loše pisao.</strong></p>
 </div>
 </section>
 <section id="drugi-pokušaj-isti-lik-bolje-upute" class="slide level2">
@@ -237,6 +228,19 @@ dugu koliko i stranica kvadrata.</li>
 oslonca, jedna radnja po koraku.</p>
 </div>
 </section>
+<section id="ovo-sam-imao-na-umu" class="slide level2">
+<h2>Ovo sam imao na umu</h2>
+<svg viewBox="0 0 360 220" width="520" role="img" aria-label="Kvadrat; krug čije je središte u gornjem desnom kutu kvadrata; trokut upisan u kvadrat s vrhom na sredini gornje stranice; vodoravna crta iz središta kruga udesno">
+<rect x="60" y="50" width="140" height="140" fill="none" stroke="#1f4e79" stroke-width="4"/>
+<polygon points="60,190 200,190 130,50" fill="none" stroke="#c0504d" stroke-width="4"/>
+<circle cx="200" cy="50" r="35" fill="none" stroke="#2e7d32" stroke-width="4"/>
+<line x1="200" y1="50" x2="340" y2="50" stroke="#555" stroke-width="4"/>
+</svg>
+<div class="fragment">
+<p>Vi niste krivo crtali. <strong>Ja sam loše opisao
+zadatak.</strong></p>
+</div>
+</section>
 <section id="ono-što-ste-upravo-doživjeli" class="slide level2">
 <h2>Ono što ste upravo doživjeli</h2>
 <pre class="mermaid"><code>flowchart LR
@@ -245,8 +249,9 @@ oslonca, jedna radnja po koraku.</p>
     C --&gt;|da| D[&quot;Čitatelj uspije&quot;]
     C --&gt;|ne| E[&quot;Čitatelj nagađa&quot;]
     E --&gt; F[&quot;Pogreška, gubitak vremena,&lt;br/&gt;odustajanje&quot;]</code></pre>
-<p><strong>Tehničko pisanje</strong> je umijeće zatvaranja razmaka
-između onoga što autor zna i onoga što čitatelj treba.</p>
+<p><strong>Tehničko pisanje</strong> je umijeće zatvaranja jaza između
+onoga što autor zna i onoga što je čitatelju potrebno za uspješno
+obavljanje zadatka.</p>
 </section></section>
 <section>
 <section id="zašto-it-stručnjak-mora-znati-pisati"
@@ -256,41 +261,39 @@ class="title-slide slide level1">
 </section>
 <section id="rujna-1999." class="slide level2">
 <h2>23. rujna 1999.</h2>
-<p>NASA gubi letjelicu <strong>Mars Climate Orbiter</strong> pri ulasku
-u Marsovu orbitu.</p>
+<p>NASA gubi letjelicu <strong>Mars Climate Orbiter</strong> tijekom
+manevra ulaska u orbitu Marsa.</p>
 <div class="fragment">
 <p>Što mislite — što je bio uzrok?</p>
 </div>
 <div class="fragment">
 <div>
 <ul>
-<li class="fragment">Jedan program računao je impuls u
-<strong>funta-sila · sekundama</strong> (lbf·s).</li>
-<li class="fragment">Drugi je očekivao <strong>njutn-sekunde</strong>
-(N·s).</li>
-<li class="fragment">Pogreška u putanji: faktor
-<strong>4,45</strong>.</li>
-<li class="fragment">Specifikacija sučelja (<strong>dokument!</strong>)
-propisivala je metričke jedinice — <strong>ali se nije
-poštivala</strong>.</li>
+<li class="fragment">Zemaljski softver bilježio je impuls u
+<strong>funta-silama × sekundama (lbf·s)</strong>.</li>
+<li class="fragment">Specifikacija sučelja (SIS) propisivala je
+<strong>njutn-sekunde (N·s)</strong>, ali se to nije provjeravalo.</li>
+<li class="fragment">Navigacijski softver čitao je vrijednosti kao N·s,
+pa je učinak potisnika bio podcijenjen za faktor <strong>4,45</strong>
+(1 lbf ≈ 4,45 N).</li>
+<li class="fragment">Pogreška se nakupljala kroz više manevara, a
+upozorenja o odstupanjima nisu dovela do akcije.</li>
 </ul>
 </div>
 </div>
 </section>
-<section id="kvar-nije-bio-u-raketi-nego-u-komunikaciji"
+<section id="kvar-nije-bio-u-raketi-nego-u-sučelju-između-sustava"
 class="slide level2">
-<h2>Kvar nije bio u raketi, nego u komunikaciji</h2>
+<h2>Kvar nije bio u raketi, nego u sučelju između sustava</h2>
 <pre class="mermaid"><code>flowchart TB
     S[&quot;Specifikacija sučelja: impuls u N·s&quot;]
     T1[&quot;Zemaljski softver šalje lbf·s&quot;]
     T2[&quot;Navigacijski softver čita kao N·s&quot;]
-    X[&quot;Putanja pogrešna 4,45 puta – letjelica izgubljena&quot;]
-    S -.-&gt;|&quot;nije poštivana&quot;| T1
-    T1 --&gt;|&quot;datoteka bez provjere jedinica&quot;| T2
+    X[&quot;Učinak potisnika podcijenjen&lt;br/&gt;za faktor 4,45 → gubitak&quot;]
+    S -.-&gt;|&quot;nije provjereno&quot;| T1
+    T1 --&gt;|&quot;bez provjere jedinica&quot;| T2
     T2 --&gt; X</code></pre>
-<p>Upozorenja navigatora o odstupanjima u putanji nisu dovela do
-akcije.</p>
-<p><small>Izvor: Mars Climate Orbiter Mishap Investigation Board,
+<p><small>Izvor: NASA, Mars Climate Orbiter Mishap Investigation Board,
 <em>Phase I Report</em>, 10. 11. 1999.</small></p>
 </section>
 <section id="brojke-koje-se-tiču-vas" class="slide level2">
@@ -596,12 +599,12 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><
     </div>
   </div>
 
-  <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@5.1.0/dist/reveal.js"></script>
 
   <!-- reveal.js plugins -->
-  <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@5/plugin/search/search.js"></script>
-  <script src="https://unpkg.com/reveal.js@5/plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@5.1.0/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@5.1.0/plugin/zoom/zoom.js"></script>
 
   <script>
 

@@ -5,7 +5,7 @@ subtitle: "1. Pisanje u informacijskim tehnologijama: čitatelj, svrha i odgovor
 date: 8. listopada 2026.
 ---
 
-# Prije nego što išta kažem…
+# Prije početka ...
 
 ## Uzmite papir i olovku
 
@@ -28,18 +28,7 @@ Ja ću ga opisati. Vi crtate. Bez pitanja.
 
 :::
 
-## Ovo sam imao na umu
 
-<svg viewBox="0 0 360 220" width="520" role="img" aria-label="Kvadrat; krug čije je središte u gornjem desnom kutu kvadrata; trokut upisan u kvadrat s vrhom na sredini gornje stranice; vodoravna crta iz središta kruga udesno">
-  <rect x="60" y="50" width="140" height="140" fill="none" stroke="#1f4e79" stroke-width="4"/>
-  <polygon points="60,190 200,190 130,50" fill="none" stroke="#c0504d" stroke-width="4"/>
-  <circle cx="200" cy="50" r="35" fill="none" stroke="#2e7d32" stroke-width="4"/>
-  <line x1="200" y1="50" x2="340" y2="50" stroke="#555" stroke-width="4"/>
-</svg>
-
-. . .
-
-Vi niste krivo crtali. **Ja sam loše pisao.**
 
 ## Drugi pokušaj: isti lik, bolje upute
 
@@ -51,6 +40,19 @@ Vi niste krivo crtali. **Ja sam loše pisao.**
 . . .
 
 **Što se promijenilo?** Redoslijed, mjere, točke oslonca, jedna radnja po koraku.
+
+## Ovo sam imao na umu
+
+<svg viewBox="0 0 360 220" width="520" role="img" aria-label="Kvadrat; krug čije je središte u gornjem desnom kutu kvadrata; trokut upisan u kvadrat s vrhom na sredini gornje stranice; vodoravna crta iz središta kruga udesno">
+  <rect x="60" y="50" width="140" height="140" fill="none" stroke="#1f4e79" stroke-width="4"/>
+  <polygon points="60,190 200,190 130,50" fill="none" stroke="#c0504d" stroke-width="4"/>
+  <circle cx="200" cy="50" r="35" fill="none" stroke="#2e7d32" stroke-width="4"/>
+  <line x1="200" y1="50" x2="340" y2="50" stroke="#555" stroke-width="4"/>
+</svg>
+
+. . .
+
+Vi niste krivo crtali. **Ja sam uputu loše napisao.**
 
 ## Ono što ste upravo doživjeli
 
@@ -103,7 +105,7 @@ Upozorenja navigatora o odstupanjima u putanji nisu dovela do akcije.
 
 <small>Izvor: Mars Climate Orbiter Mishap Investigation Board, *Phase I Report*, 10. 11. 1999.</small>
 
-## Brojke koje se tiču vas
+## Brojke bitne za IT-evce
 
 :::: columns
 
@@ -111,7 +113,7 @@ Upozorenja navigatora o odstupanjima u putanji nisu dovela do akcije.
 
 ### 93 %
 
-sudionika istraživanja zajednice otvorenog koda susrelo se s **nepotpunom ili zastarjelom dokumentacijom**.
+sudionika u zajednici otvorenog koda susrelo se s **nepotpunom ili zastarjelom dokumentacijom**.
 
 <small>GitHub Open Source Survey, 2017.</small>
 
@@ -121,7 +123,7 @@ sudionika istraživanja zajednice otvorenog koda susrelo se s **nepotpunom ili z
 
 ### 83,9 %
 
-programera uči programirati iz **tehničke dokumentacije** — više nego iz ijednog drugog mrežnog izvora.
+programera uči iz **tehničke dokumentacije** — više nego iz ijednog drugog mrežnog izvora.
 
 <small>Stack Overflow Developer Survey, 2024.</small>
 
@@ -131,15 +133,15 @@ programera uči programirati iz **tehničke dokumentacije** — više nego iz ij
 
 . . .
 
-Dokumentaciju ćete **čitati svaki dan**. Pitanje je samo hoćete li je znati i **pisati**.
+Dokumentaciju ćete **čitati svaki dan**. Pitanje je samo hoćete li je znati i **napisati**.
 
 ## Ruke gore
 
 ::: incremental
 
 - Tko je ikada odustao od instalacije igre, moda ili programa zbog loših uputa?
-- Tko je ikada kopirao naredbu s interneta, a da nije znao što radi?
-- Tko je ikada pitao AI za pomoć i dobio odgovor koji nije radio?
+- Tko je ikada kopirao naredbu s interneta, a da nije znao što (naredba) radi?
+- Tko je ikada pitao AI za pomoć i dobio odgovor koji nije funkcionirao?
 
 :::
 
@@ -232,9 +234,9 @@ mindmap
     Dnevnik promjena
 ```
 
-Pisano u **Markdownu**, verzionirano u **Gitu**, objavljeno na **GitHub Pages**. Testira ga **kolega iz klupe**.
+Pisano u **Markdownu**, verzionirano u **Gitu**, objavljeno na **GitHub Pages**. Testira ga **kolega/ica iz učionice**.
 
-## Put kroz semestar
+## Putovanje kroz semestar
 
 ```mermaid
 gantt
@@ -299,7 +301,7 @@ Teška povreda (prepisivanje, izmišljeni izvori, skriveni AI) **ne može se nad
 
 **Ovako ne:**
 
-> bok profesore kad je kolokvij i jel moram doc na vjezbe jer radim
+> bog profesore kad je kolokvij i moramli doc na vjezbe jer radin od četiri
 >
 > *Poslano s mog iPhonea*
 
@@ -314,6 +316,7 @@ Teška povreda (prepisivanje, izmišljeni izvori, skriveni AI) **ne može se nad
 - **što trebate**, u jednoj rečenici
 - kontekst, ako je potreban
 - potpis i fakultetska adresa
+- pravopis i gramatika
 
 :::
 
@@ -329,7 +332,7 @@ Teška povreda (prepisivanje, izmišljeni izvori, skriveni AI) **ne može se nad
 4. **Plan rada** na predmetu: svi rokovi na jednom mjestu
 5. **Profesionalni e-mail**
 
-## Za kraj: tajna ovih slajdova
+## Za kraj: kako su nastali ovi slideovi
 
 Ova prezentacija nije napravljena u PowerPointu.
 
@@ -344,6 +347,6 @@ Ova prezentacija nije napravljena u PowerPointu.
 
 . . .
 
-To je **obična tekstna datoteka** u **Markdownu**, pretvorena u slajdove alatom **Pandoc**.
+To je **obična tekstualna datoteka** u **Markdownu**, pretvorena u slajdove pomoću alata **Pandoc**.
 
 Za mjesec dana i vi ćete pisati ovako.
